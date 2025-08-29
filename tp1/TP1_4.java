@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class TP1 {
+//punto 4
+public class TP1_4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class TP1 {
         if (nro1 > nro2 & nro1 > nro3){
             System.out.println("El mayor es " + nro1);
         } else {
-            if (nro2 > nro1 & nro2 > nro1)
+            if (nro2 > nro1 & nro2 > nro3)
             System.out.println("El mayor es " + nro2);
             else
             System.out.println("El mayor es " + nro3);
