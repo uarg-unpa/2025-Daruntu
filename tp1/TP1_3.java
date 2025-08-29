@@ -11,10 +11,19 @@ public class TP1_3 {
         int C = scanner.nextInt();
         scanner.nextLine();
 
+        System.out.println("Los valores iniciales:");
+        System.out.println("A = " + A);
+        System.out.println("B = " + B);
+        System.out.println("C = " + C);
+
         int aux = A;
         A = C;
         C = aux;
         B = aux;
-        System.out.println("Los valores son: " + "A = " + A + "B = " + B + "C = " + C);
+        System.out.println("Los valores finales son: ");
+        System.out.println("A = " + A);
+        System.out.println("B = " + B);
+        System.out.println("C = " + C);
+        
     }
 }
