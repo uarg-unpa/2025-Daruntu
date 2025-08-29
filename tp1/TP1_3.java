@@ -24,6 +24,6 @@ public class TP1_3 {
         System.out.println("A = " + A);
         System.out.println("B = " + B);
         System.out.println("C = " + C);
-        
+        scanner.close();
     }
 }
