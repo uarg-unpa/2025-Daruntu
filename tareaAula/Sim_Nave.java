@@ -8,7 +8,7 @@ public class Sim_Nave {
     private double velocidad;
     private double litros;
     private String destino;
-
+    private final double consumo_litros = 150;
 
     public Sim_Nave (String nombre, double velocidad, double litros, String destino){
         this.nombre = nombre;
@@ -22,8 +22,14 @@ public class Sim_Nave {
     }
 
     public void acelerar(){
-        this.velocidad += 100;
-        System.out.println("La nave: " + this.nombre + " aceleró a " + this.velocidad + " km/h");
+        if (litros >= consumo_litros) {
+            this.velocidad += 100;
+            this.litros -= consumo_litros;
+            System.out.println("La nave " +this.nombre+ " aceleró a "+this.velocidad+ " km/h");
+            System.out.println("Combustible consumido: " + consumo_litros + " litros.");
+        } else {
+            System.out.println("¡CUIDADO! No hay suficiente combustible para acelerar."); 
+        }
     }
 
     public void mostrarInforme() {
