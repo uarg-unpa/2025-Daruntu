@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class naveMain{
+public class Simulador{
     public static void main (String [] args){
         Scanner scanner = new Scanner(System.in);
 
@@ -14,23 +14,21 @@ public class naveMain{
         System.out.println("Ingrese el destino: ");
         String destiny = scanner.nextLine();
 
-        Sim_Nave n1 = new Sim_Nave(name, speed, fuel, destiny);
+        NaveEspacial n1 = new NaveEspacial(name, speed, fuel, destiny);
 
         System.out.println(" ");
         System.out.println("- Informe inicial -");
         n1.mostrarInforme();
 
         if (n1.puedeLlegar()) {
-            System.out.println(n1.getNombre() + " puede completar la misión.");
+            System.out.println(n1.getNOMBRE() + " puede completar la misión.");
+            n1.acelerar();
+            System.out.println(" ");
+            System.out.println("- Informe final -");
+            n1.mostrarInforme();
         }   else {
-                System.out.println("Proceda con cuidado.");
-        }
-
-        n1.acelerar();
-
-        System.out.println(" ");
-        System.out.println("- Informe final -");
-        n1.mostrarInforme();
+                System.out.println("No puede completar la misión.");
+            }
 
         scanner.close();
     }
