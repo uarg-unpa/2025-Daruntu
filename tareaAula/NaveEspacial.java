@@ -20,25 +20,31 @@ public class NaveEspacial {
         return LITROS > 1000;
     }
 
-    public void acelerar(){
+    public boolean acelerar(){
+        if (this.LITROS > 0) {
             this.VELOCIDAD += 100;
-            System.out.println("La nave " +this.NOMBRE+ " aceleró a "+this.VELOCIDAD+ " km/h");
-        
+            System.out.println("La nave " + this.NOMBRE + " aceleró a " + this.VELOCIDAD + " km/h");
+            return true;
+        } else {
+            System.out.println("¡ALERTA! La nave " + this.NOMBRE + " no tiene combustible para acelerar.");
+            return false;
+        }
     }
 
-    public void mostrarInforme() {
-        System.out.println("-----------------------");
-        System.out.println("NOMBRE de la nave: " + this.NOMBRE);
-        System.out.println("DESTINO: " + this.DESTINO);
-        System.out.println("VELOCIDAD: " + this.VELOCIDAD + " km/h");
-        System.out.println("Combustible restante: " + this.LITROS + " litros");
-        System.out.println("-----------------------");
+     public String toString() {
+        String informe = "-----------------------\n" +
+                         "Nombre de la nave: " + this.NOMBRE + "\n" +
+                         "Destino: " + this.DESTINO + "\n" +
+                         "Velocidad: " + this.VELOCIDAD + " km/h\n" +
+                         "Combustible restante: " + this.LITROS + " litros\n" +
+                         "-----------------------\n";
 
         if (this.puedeLlegar()) {
-            System.out.println("Estado: La nave tiene suficiente combustible para llegar a su DESTINO");
-        }   else {
-            System.out.println("Estado: ¡ALERTA! El combustible es insuficiente para la misión.");
-            }
+            informe += "Estado: La nave tiene suficiente combustible para llegar a su destino";
+        } else {
+            informe += "Estado: ¡ALERTA! El combustible es insuficiente para la misión.";
+        }
+        return informe;
     }
 
     public String getNOMBRE() {
