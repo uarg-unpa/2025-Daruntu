@@ -31,7 +31,7 @@ public class NaveEspacial {
         }
     }
 
-     public String toString() {
+    public String toString() {
         String informe = "-----------------------\n" +
                          "Nombre de la nave: " + this.NOMBRE + "\n" +
                          "Destino: " + this.DESTINO + "\n" +
@@ -41,7 +41,7 @@ public class NaveEspacial {
 
         if (this.puedeLlegar()) {
             informe += "Estado: La nave tiene suficiente combustible para llegar a su destino";
-        } else {
+        }   else {
             informe += "Estado: ¡ALERTA! El combustible es insuficiente para la misión.";
         }
         return informe;

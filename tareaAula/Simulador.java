@@ -21,13 +21,11 @@ public class Simulador{
         System.out.println(n1);
 
         if (n1.puedeLlegar()) {
-            System.out.println(n1.getNOMBRE() + " puede completar la misión.\\n" + //
-                                "");
+            System.out.println(n1.getNOMBRE() + " puede completar la misión.");
             n1.acelerar();
         }   else {
                 System.out.println("No puede completar la misión.");
             }
-
         scanner.close();
     }
 }
