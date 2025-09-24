@@ -6,7 +6,7 @@
 package Pilas;
 
 public class Pila {
-    private final int maxPila = 5; //no se especifica cual es el tamaño de la pila.
+    private final int maxPila = 5; //no se especifica cual es el tamaño de la pila en el pdf.
     private int [] elementos;
     private int cima;
     
