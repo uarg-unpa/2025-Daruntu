@@ -4,14 +4,13 @@ Frente Fijo y Final Movible (tener en cuenta que al borrar debe correr todos los
 package Colas;
 public class Cola{
     private int [] elementos;
-    private int maxcola;
+    private int maxcola = 5;
     private int frente, ultimo;
 
     public Cola(int maxcola){
-        this.maxcola = maxcola;
         elementos = new int [maxcola];
         frente = 0;
-        ultimo = 0;
+        ultimo = -1;
     }
 
     public boolean estaVacia(){
@@ -23,24 +22,24 @@ public class Cola{
     }
     
     public void insertar(int valor){
-        elementos[++frente] = valor;
+        elementos[++ultimo] = valor;
     }
 
     public int borrar(){
         if (!estaVacia()){
             int eliminado = elementos[0];
-            for (int i = 0; i < maxcola; i++){
+            for (int i = 0; i < ultimo - 1; i++){
                 elementos[i] = elementos[i + 1];
             }
-            frente--;
+            ultimo--;
             return eliminado;
         }
-        return 0;
+        return -1;
     }
 
     public int frente(){
         if (estaVacia()){
-            return 0;
+            return -1;
         }else{
             return elementos[frente];
         }
