@@ -25,13 +25,15 @@ public class Cola{
         elementos[++ultimo] = valor;
     }
 
+    //esta parte se me complicó porque confundí el frente y el ultimo, pero pude resolverlo.
+    
     public int borrar(){
         if (!estaVacia()){
             int eliminado = elementos[0];
             for (int i = 0; i < ultimo - 1; i++){
                 elementos[i] = elementos[i + 1];
             }
-            ultimo--;
+            ultimo--; 
             return eliminado;
         }
         return -1;
