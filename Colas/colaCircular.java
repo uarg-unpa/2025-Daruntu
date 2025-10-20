@@ -42,7 +42,7 @@ public class colaCircular {
 		frente =siguiente(frente);
 		return elementos[frente];
 	}
-
+    //Método que cuenta los elementos de la cola.
 	public int contar(){
 			int contador = 0;
 			int i = siguiente(frente);
