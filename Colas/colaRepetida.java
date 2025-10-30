@@ -14,8 +14,8 @@ public class colaRepetida {
 	public colaRepetida(){
 		elementos = new int[maxcola];
         colaRep = new int [maxcola];
-		frente=-1;
-		ultimo=-1;
+		frente=0;
+		ultimo=0;
 	}
 	
 	public boolean estaVacia(){
@@ -29,7 +29,7 @@ public class colaRepetida {
 	
 	private int siguiente(int subind){
 		if (subind == maxcola -1)
-			return -1;
+			return 0;
 		else
 			return ++subind;
 	}
